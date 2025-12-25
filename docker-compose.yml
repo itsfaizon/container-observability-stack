@@ -31,7 +31,7 @@ services:
     volumes:
       - grafana-data:/var/lib/grafana
     environment:
-      - GF_SECURITY_ADMIN_PASSWORD=Cookie
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
       - GF_SERVER_ROOT_URL=http://10.97.51.1/grafana/
       - GF_SERVER_SERVE_FROM_SUB_PATH=true
 
